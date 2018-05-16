@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target ‘CYW’
+pod "JSONModel"
+pod "AFNetworking"
+pod "ODRefreshControl"
+pod "BlocksKit"
+pod “SDAutoLayout”
+pod “ZYQAssetPickerController”
+pod "SVPullToRefresh"
+pod "SDCycleScrollView"
+post_install do |installer|
+  require 'fileutils'
+end
