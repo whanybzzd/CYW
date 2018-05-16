@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <SDAutoLayout/SDAutoLayout.h>
 @interface ViewController ()
 
 @end
@@ -17,7 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor=[UIColor orangeColor];
+    
+    UIButton *but=[UIButton new];
+    but.backgroundColor=[UIColor redColor];
+    [but setTitle:@"登录" forState:UIControlStateNormal];
+    [but setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    but.layer.cornerRadius=5;
+    [self.view addSubview:but];
+    
+    but.sd_layout
+    .leftSpaceToView(self.view, 15)
+    .rightSpaceToView(self.view, 15)
+    .topSpaceToView(self.view, 100)
+    .heightIs(40);
     
 }
 
