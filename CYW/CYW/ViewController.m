@@ -21,6 +21,7 @@
     UIButton *but=[UIButton new];
     but.backgroundColor=[UIColor redColor];
     [but setTitle:@"登录" forState:UIControlStateNormal];
+    but.titleLabel.font=[UIFont systemFontOfSize:15];
     [but setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     but.layer.cornerRadius=5;
     [self.view addSubview:but];
