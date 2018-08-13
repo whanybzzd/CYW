@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -29,50 +30,164 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - BRPickerView (2.2.1)
+  - DZNEmptyDataSet (1.8.1)
+  - EAFeatureGuideView (1.0.9)
+  - FLAnimatedImage (1.0.12)
+  - FSTextView (1.8)
+  - GTMBase64 (1.0.1)
+  - IQKeyboardManager (6.0.4)
+  - JAnalytics (1.2.0):
+    - JCore (~> 1.1.7)
+  - JCore (1.1.9)
+  - JDStatusBarNotification (1.5.6)
+  - JPush (3.0.6):
+    - JCore (~> 1.1.1)
   - JSONModel (1.7.0)
+  - LDImagePicker (1.0.4)
+  - Masonry (1.1.0)
+  - MOBFoundation (3.1.6)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
   - ODRefreshControl (1.2)
+  - PQActionSheet (0.1.2)
+  - ReactiveObjC (3.1.0)
   - SDAutoLayout (2.2.0)
   - SDCycleScrollView (1.73):
     - SDWebImage (~> 4.0.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - ShareSDK3 (4.0.4):
+    - MOBFoundation
+    - ShareSDK3/ShareSDK (= 4.0.4)
+  - ShareSDK3/ShareSDK (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/QQ (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/WeChat (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKUI (4.0.4):
+    - MOBFoundation
   - SVPullToRefresh (0.4.1)
+  - YRJSONAdapter (1.0.1)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
   - ZYQAssetPickerController (1.2.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - Aspects
   - BlocksKit
+  - BRPickerView
+  - DZNEmptyDataSet
+  - EAFeatureGuideView
+  - FLAnimatedImage
+  - FSTextView
+  - GTMBase64
+  - IQKeyboardManager
+  - JAnalytics
+  - JDStatusBarNotification
+  - JPush (= 3.0.6)
   - JSONModel
+  - LDImagePicker
+  - Masonry
+  - MOBFoundation
+  - NJKWebViewProgress
   - ODRefreshControl
+  - PQActionSheet
+  - ReactiveObjC
   - SDAutoLayout
   - SDCycleScrollView
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - ShareSDK3/ShareSDKUI
   - SVPullToRefresh
+  - YRJSONAdapter
+  - YYWebImage
   - ZYQAssetPickerController
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Aspects
     - BlocksKit
+    - BRPickerView
+    - DZNEmptyDataSet
+    - EAFeatureGuideView
+    - FLAnimatedImage
+    - FSTextView
+    - GTMBase64
+    - IQKeyboardManager
+    - JAnalytics
+    - JCore
+    - JDStatusBarNotification
+    - JPush
     - JSONModel
+    - LDImagePicker
+    - Masonry
+    - MOBFoundation
+    - NJKWebViewProgress
     - ODRefreshControl
+    - PQActionSheet
+    - ReactiveObjC
     - SDAutoLayout
     - SDCycleScrollView
     - SDWebImage
+    - ShareSDK3
     - SVPullToRefresh
+    - YRJSONAdapter
+    - YYCache
+    - YYImage
+    - YYWebImage
     - ZYQAssetPickerController
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  BRPickerView: 0590a8c5de9bd98c6b4e4f117a3dff6de287d5b2
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  EAFeatureGuideView: f0cee7b10edb30e6507f744cd4d0787b5398b876
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FSTextView: 9e2ca07bb6bb0fb7e77b49b2717adf81f3c620b5
+  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
+  IQKeyboardManager: 29514134ef0334a6fa33cf4eee11c36c064baeaf
+  JAnalytics: 21c9c27639e6b9aae503e303a25c82c7a38e08ef
+  JCore: 27598485098d0db99d2812cba048003457d08cfb
+  JDStatusBarNotification: d5829a8f2f291b23b8a54b87fac8bf2549945a2f
+  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  LDImagePicker: c8b1d07395d2ec59d03cb984aa537dd029ccd21d
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MOBFoundation: a87c5f11fb87f873337189c3ec0add4d3ec6221a
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   ODRefreshControl: 907e6149d72dde488d5917ccfabee5bd8d711a20
+  PQActionSheet: cf84354cbaafbd02c0a34b8825f58b5fd3a2cb14
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
   SDCycleScrollView: d0fd5fe40a80918371fd8939214eb3be81033d83
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  ShareSDK3: 75b57bab0cbe3119e281c7668eaad9d48adf3fde
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  YRJSONAdapter: 55956d3e6f6b6eadf05e734914b8d29afa0fc06b
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
   ZYQAssetPickerController: dc692a6fb421c0dc0efcabd43eb260cfb073f7fd
 
-PODFILE CHECKSUM: b1c3eb7b73858f97e4a1183f1ad99ae4125c3a38
+PODFILE CHECKSUM: 6ac0bb708b97122bfe2c0c5fcf29df59d2115081
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+@class BaseTabBarController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) BaseTabBarController *tabBarController;
+@property (nonatomic, strong) NSMutableArray *viewControllers;
 
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
-
-- (void)saveContext;
+- (void)setTabbarController;
+- (void)setUpTabbarController;
+- (void)setUpGueTabbarController;
 
 
 @end

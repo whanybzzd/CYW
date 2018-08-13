@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CYWAssetsCalendarsViewController">
+            <connections>
+                <outlet property="tableView" destination="tFE-Y8-ABT" id="7rN-dv-gLx"/>
+                <outlet property="tableViewHeadView" destination="iHq-Nt-q2U" id="3Tr-zN-DYe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tFE-Y8-ABT">
+                    <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FNE-SS-Q8U"/>
+                        <outlet property="delegate" destination="-1" id="7OU-qs-0Ws"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tFE-Y8-ABT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="88" id="1Aa-zV-MOi"/>
+                <constraint firstAttribute="bottom" secondItem="tFE-Y8-ABT" secondAttribute="bottom" id="4Te-vc-dru"/>
+                <constraint firstAttribute="trailing" secondItem="tFE-Y8-ABT" secondAttribute="trailing" id="Hvw-yi-dec"/>
+                <constraint firstItem="tFE-Y8-ABT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x1T-Gm-qdI"/>
+            </constraints>
+            <point key="canvasLocation" x="36" y="85"/>
+        </view>
+        <view contentMode="scaleToFill" id="iHq-Nt-q2U" customClass="CYWAssetsCalendarView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="422"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuB-gh-pib">
+                    <rect key="frame" x="15" y="0.0" width="60" height="45"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="0ZH-3z-Ph7"/>
+                        <constraint firstAttribute="width" constant="60" id="jhJ-lg-oE6"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khf-Ud-EQj">
+                    <rect key="frame" x="15" y="45" width="345" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="EUw-he-She"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0K-4c-ciY">
+                    <rect key="frame" x="90" y="10" width="1" height="25"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="5Hf-B5-SUr"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eib-Sc-UN7" customClass="LiuXSegmentView">
+                    <rect key="frame" x="99" y="0.0" width="276" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="UnL-Fd-PXP"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rb8-Zt-rl8">
+                    <rect key="frame" x="0.0" y="46" width="375" height="376"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rb8-Zt-rl8" firstAttribute="top" secondItem="Khf-Ud-EQj" secondAttribute="bottom" id="2C7-Ma-imH"/>
+                <constraint firstItem="rb8-Zt-rl8" firstAttribute="leading" secondItem="iHq-Nt-q2U" secondAttribute="leading" id="4G3-5L-maX"/>
+                <constraint firstItem="eib-Sc-UN7" firstAttribute="top" secondItem="iHq-Nt-q2U" secondAttribute="top" id="B1j-Sb-zTV"/>
+                <constraint firstItem="Khf-Ud-EQj" firstAttribute="leading" secondItem="iHq-Nt-q2U" secondAttribute="leading" constant="15" id="E4c-hh-NU9"/>
+                <constraint firstItem="Khf-Ud-EQj" firstAttribute="top" secondItem="n0K-4c-ciY" secondAttribute="bottom" constant="10" id="GP5-e4-wCl"/>
+                <constraint firstItem="AuB-gh-pib" firstAttribute="leading" secondItem="iHq-Nt-q2U" secondAttribute="leading" constant="15" id="HQi-ug-cpO"/>
+                <constraint firstAttribute="trailing" secondItem="eib-Sc-UN7" secondAttribute="trailing" id="NXk-dv-FGi"/>
+                <constraint firstItem="eib-Sc-UN7" firstAttribute="leading" secondItem="n0K-4c-ciY" secondAttribute="trailing" constant="8" id="OXS-RK-77x"/>
+                <constraint firstAttribute="trailing" secondItem="Khf-Ud-EQj" secondAttribute="trailing" constant="15" id="b9g-IA-7ib"/>
+                <constraint firstItem="AuB-gh-pib" firstAttribute="top" secondItem="iHq-Nt-q2U" secondAttribute="top" id="c7A-ff-QWa"/>
+                <constraint firstItem="n0K-4c-ciY" firstAttribute="top" secondItem="iHq-Nt-q2U" secondAttribute="top" constant="10" id="cad-6m-8u6"/>
+                <constraint firstItem="n0K-4c-ciY" firstAttribute="leading" secondItem="AuB-gh-pib" secondAttribute="trailing" constant="15" id="f1j-2p-eVT"/>
+                <constraint firstItem="Khf-Ud-EQj" firstAttribute="top" secondItem="AuB-gh-pib" secondAttribute="bottom" id="hmd-qT-tGQ"/>
+                <constraint firstAttribute="trailing" secondItem="rb8-Zt-rl8" secondAttribute="trailing" id="rvb-je-fjB"/>
+                <constraint firstAttribute="bottom" secondItem="rb8-Zt-rl8" secondAttribute="bottom" id="wau-mc-B9S"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="button" destination="AuB-gh-pib" id="aeH-Qh-qam"/>
+                <outlet property="calendarScrollView" destination="rb8-Zt-rl8" id="1xw-yQ-und"/>
+                <outlet property="segmentController" destination="eib-Sc-UN7" id="hBd-jZ-OEx"/>
+            </connections>
+            <point key="canvasLocation" x="476.5" y="-61"/>
+        </view>
+    </objects>
+</document>

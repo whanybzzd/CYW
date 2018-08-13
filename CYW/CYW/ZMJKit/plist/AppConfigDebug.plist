@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>kResPathAppBaseUrl</key>
+	<string>http://jordanliuw.gicp.net:26137/app/publicRequest</string>
+	<key>kResPathAppImageUrl</key>
+	<string>http://jordanliuw.gicp.net:26137</string>
+</dict>
+</plist>

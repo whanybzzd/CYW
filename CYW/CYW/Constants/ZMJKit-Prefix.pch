@@ -1,0 +1,142 @@
+//
+//  ZMJKit-Prefix.pch
+//  FrameWork
+//
+//  Created by ZMJ on 2017/3/25.
+//  Copyright © 2017年 ZMJ. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+
+#import "AdditionsClass.h"
+//登录
+#import "Login.h"
+#endif
+
+
+
+
+
+#ifndef ZMJKit_Prefix_pch
+#define ZMJKit_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define SkipVersion                     [NSString stringWithFormat:@"SkipVersion_V%@", VersionNumber]
+
+#define WeakSelfType __weak __typeof(&*self)
+#define ReturnWhenObjectIsEmpty(object)             if ([NSObject isEmpty:object]) { return ;    }
+#define ReturnNilWhenObjectIsEmpty(object)          if ([NSObject isEmpty:object]) { return nil; }
+#define ReturnEmptyWhenObjectIsEmpty(object)        if ([NSObject isEmpty:object]) { return @""; }
+#define ReturnYESWhenObjectIsEmpty(object)          if ([NSObject isEmpty:object]) { return YES; }
+#define ReturnNOWhenObjectIsEmpty(object)           if ([NSObject isEmpty:object]) { return NO;  }
+#define ReturnZeroWhenObjectIsEmpty(object)         if ([NSObject isEmpty:object]) { return 0;  }
+
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+
+
+#define postN(_name) ([[NSNotificationCenter defaultCenter] postNotificationName:_name object:nil userInfo:nil])
+
+#define addNObserver(_selector,_name) ([[NSNotificationCenter defaultCenter] addObserver:self selector:_selector name:_name object:nil])
+
+
+/**
+ *  定义单例
+ */
+#pragma mark - Singleton
+
+#ifndef __OPTIMIZE__
+#define NSLog(FORMAT, ...) fprintf(stderr, "%s:%i\t%s\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
+#else
+#define NSLog(...){}
+#endif
+
+
+//获取导航栏+状态栏的高度
+#define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
+
+#define DEFINE_SHARED_INSTANCE_USING_BLOCK(block) \
+static dispatch_once_t pred = 0; \
+__strong static id _sharedObject = nil; \
+dispatch_once(&pred, ^{ \
+_sharedObject = block(); \
+}); \
+return _sharedObject;
+
+
+
+#define CallPhone(name) [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[[NSMutableString alloc] initWithFormat:@"telprompt://%@",name]]];
+
+
+
+#define SCREEN_WIDTH                  [UIScreen mainScreen].bounds.size.width //屏幕的宽度
+#define SCREEN_HEIGHT                 [UIScreen mainScreen].bounds.size.height//屏幕的高度
+#define Welcome                       [NSString stringWithFormat:@"Welcome_V%@", VersionNumber]
+#define VersionNumber                    [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define VersionName                    [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
+//#define TOKEN  ([Login sharedInstance].token == nil ? @"" : [Login sharedInstance].token)
+#define TOKEN  ([CacheMessage readCacheUserdID])
+
+/**
+ *  定义项目的配置文件路径
+ */
+#define ConfigValue(x)              [[AppConfigManager sharedInstance] valueInAppConfig:x]                //获取项目动态的配置信息
+
+
+
+#define kResPathAppBaseUrl        ConfigValue(@"kResPathAppBaseUrl")
+#define kResPathAppImageUrl       ConfigValue(@"kResPathAppImageUrl")
+
+#define FileDefaultManager              [NSFileManager defaultManager]
+
+//Documents目录
+#define kDefaultDocuments(quanxian)                 [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",quanxian]]
+
+//文件管理
+#define kDefaultFileManager                 [NSFileManager defaultManager]
+
+#define kDefaultReadDocumentImg(account) [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",account]] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",account]]
+
+
+#define kDefaultFileName(filename) [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES)    objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",filename]]
+
+/**
+ *  重新定义NSLog
+ */
+//控制调试信息的输出
+#define DEBUGMODEL      [[NSUserDefaults standardUserDefaults] boolForKey:@"DEBUG"]
+
+
+#ifdef DEBUG//调试状态，打开LOG功能
+#define Production NO
+#else//发布状态，关闭LOG功能
+#define Production YES
+
+#endif
+
+/**
+ *  忽略警告
+ */
+//
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+
+#define kDeviceVersion [[UIDevice currentDevice].systemVersion floatValue]
+#define kNavbarHeight ((kDeviceVersion>=7.0)? 64 :44 )
+#define kIOS7DELTA   ((kDeviceVersion>=7.0)? 20 :0 )
+#define kTabBarHeight 49
+
+#define kDevice_Is_iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+
+
+#endif /* ZMJKit_Prefix_pch */

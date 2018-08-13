@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIViewController</key>
+	<dict>
+		<key>GLLoggingTrackedEvents</key>
+		<array>
+			<dict>
+				<key>GLLoggingName</key>
+				<string>UIViewController</string>
+				<key>GLLoggingDidAppear</key>
+				<string>viewDidAppear:</string>
+				<key>GLLoggingDidDisappear</key>
+				<string>viewDidDisappear:</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>
